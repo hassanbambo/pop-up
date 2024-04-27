@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPPING UP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+
+        <div class="popup" id="popup">
+            <img src="images/icons8-checked-48.png" alt="" srcset="">
+            <h2>Thanks For Cicking! </h2>
+            <p>Your action of clickin was hihgly appreciated</p>
+            <button type="submit" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+            popup.style.transition = "all 0.1s ease-out";
+        }
+
+    </script>
+</body>
+</html>
